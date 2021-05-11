@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Ana Sayfa</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      @font-face {
+    font-family: redroseregular;
+    src: url('redrose-variablefont_wght-webfont.woff2') format('woff2'),
+         url('redrose-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 10vh;
+        width: 100%;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      li {
+        float: left;
+        height: 10vh;
+
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 28px 32px;
+        text-decoration: none;
+        font-family: redroseregular, 'Times New Roman', Times, serif;
+        font-size: large;
+      }
+
+      li a:hover {
+      background-color: rgb(25, 25, 25);
+      color: white;
+    }
+
+      .active {
+        background-color: forestgreen;
+        color: #000;
+        
+      }
+      
+      #map {
+        position: absolute;
+        height: 90%;
+        width: 100%;
+      }
+
+      .marker {
+        background-image: url('radio (1).png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .mapboxgl-popup {
+        width: 500px;
+      }
+
+      .mapboxgl-popup-content {
+        text-align: left;
+        font-family: redroseregular;
+        font-size: 20px;
+        font-weight: lighter;
+        width: 300px;
+      }
+
+      .mapboxgl-popup-content .p {
+        font-weight: 100;
+        font-size: 20px;
+      }
+
+      .mapboxgl-popup-content .h3 {
+        text-align: center;
+        font-weight: 2000;
+      }
+
+      .mapboxgl-popup-content .h5 {
+        font-weight: 1000;
+        font-size: smaller;
+      }
+      
+    </style>
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="index.html">ANA SAYFA</a></li>
+    <li><a href="about.html">HAKKINDA</a></li>
+    <li><a href="contribute.html">KATKIDA BULUN!^</a></li>
+    <li><a href="future.html">GELECEKTE?</a></li>
+  </ul>
+
+  <div id='map'></div>
+
+  <script>
+
+  mapboxgl.accessToken = 'pk.eyJ1Ijoia2F5cmFrYWhyYW1hbiIsImEiOiJja2h6YTJ1aGwwOG9oMnJxazd1cm1rMnFnIn0.jPibphywFpVeip39edqQGQ';
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/kayrakahraman/ckhz7iicr1fnl19pu93ecni8g',
+    center: [28.967,41.017],
+    zoom: 9.64
+  });
+
+  // code from the next step will go here!
+  var geojson = {
+    type: 'FeatureCollection',
+    features: [{
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [28.981749, 41.025046]
+      },
+      properties: {
+        title: 'İnşaat Gürültüsü',
+        participant: 'Ses Sahibi: Dua Kayra Kahraman',
+        datetime: 'Tarih, Saat: 12.02.2021, 15.58',
+        explanation: 'Galataport inşaatında çalışan öğle vakti çalışan inşaat makinelerinin çıkardığı yüksek desibelli ve rahatsız edici mekanik gürültü.',
+        sound: '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/973023586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-803295118-926584779" title="kayra" target="_blank" style="color: #cccccc; text-decoration: none;">kayra</a> · <a href="https://soundcloud.com/user-803295118-926584779/galataport-is-makineleri-calisma-sesi" title="Galataport İş Makineleri Çalışma Sesi" target="_blank" style="color: #cccccc; text-decoration: none;">Galataport İş Makineleri Çalışma Sesi</a></div>'
+      }
+    }]
+  };
+
+  // add markers to map
+  geojson.features.forEach(function(marker) {
+
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'marker';
+
+    // make a marker for each feature and add to the map
+
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+        .setHTML(marker.properties.sound + '<h3>' + marker.properties.title + '</h3><h5>' + marker.properties.participant + '</h5><h5>' + marker.properties.datetime + '</h5><p>' + marker.properties.explanation + '</p>'))
+      .addTo(map);
+  });
+
+
+  </script>
+
+</body>
+</html>

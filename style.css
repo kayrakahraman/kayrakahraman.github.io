@@ -1,0 +1,81 @@
+h1 {
+    padding: 0.5em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: xx-large;
+}
+
+#header {
+    background-color: #db0000;
+    margin: 25px 0px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+    background-color: #f7ced7ff;
+    padding: 0.875em;
+    color: #b80000;
+    opacity: 1.0;
+    font-family: "Courier New", Courier, monospace;
+}
+
+body {
+    background-color: #f99fc9ff;
+}
+
+.reg {
+    font-size: x-small;
+    color: #ba0020ff;
+    font-family: "Courier New", Courier, monospace;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f99fc9ff;
+  position: sticky;
+  top: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+li {
+  float: left;
+  font-family: "Courier New", Courier, monospace;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+}
+
+li a:link {
+    color: white;
+}
+
+li a:visited {
+    text-decoration: underline;
+    color: blue;
+}
+
+li a:hover {
+  background-color: white;
+  color: #a80000;
+  font-family: "Courier New", Courier, monospace;
+}
+
+ .active {
+  background-color: #a80000;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.footer {
+  background-color: #f7ced7ff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+

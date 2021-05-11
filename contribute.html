@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Katıl!</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDan1ygVaL9hvSTzAvDpTy2uU-CrpQmbpk&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+  <style>
+    
+    @font-face {
+    font-family: redroseregular;
+    src: url('redrose-variablefont_wght-webfont.woff2') format('woff2'),
+         url('redrose-variablefont_wght-webfont.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+
+}
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      background-image: url('15.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      height: 10vh;
+      width: 100%;
+      overflow: hidden;
+      background-color: #000;
+      text-align: center;
+    }
+    
+    li {
+      float: left;
+      height: 10vh;
+      text-align: center;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 28px 32px;
+      text-decoration: none;
+      font-family: redroseregular, 'Times New Roman', Times, serif;
+      font-size: large;
+    }
+    
+    li a:hover {
+      background-color: rgb(25, 25, 25);
+      color: white;
+    }
+    
+    .active {
+      background-color:rgb(55, 55, 55);
+      color: #000;
+      
+    }
+    .container {
+      margin: auto;
+      width: 60%;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      padding: 0.875em;
+      color: #ffffff;
+      background-color: rgba(55, 55, 55, 0.5);
+      opacity: 1.0;
+      font-family: redroseregular;
+    }
+    .btn-primary {
+      background-color: forestgreen;
+      border-color: forestgreen;
+    }
+    .btn-danger {
+      background-color: rgb(43, 43, 43);
+      border-color: rgb(43, 43, 43);
+    }
+    .btn-primary:hover {
+      background-color:lightgreen;
+      border-color: lightgreen;
+    }
+    .btn-danger:hover {
+      background-color: rgb(100, 100, 100);
+      border-color: rgb(100, 100, 100);
+    }
+ 
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="index.html">ANA SAYFA</a></li>
+    <li><a href="about.html">HAKKINDA</a></li>
+    <li><a class="active" href="contribute.html">KATKIDA BULUN!^</a></li>
+    <li><a href="future.html">GELECEKTE?</a></li>
+  </ul>
+  <div class = "container">
+    <h2>Katılın!^</h2>
+    <p1>
+      Kaydettiğiniz sesleri yükleyebileceğiniz forma hoş geldiniz! Yükleyeceğiniz seslerin bu ufak projeme katkısı düşünebileceğinizden çok daha fazla. Ortağım olmaya karar verdiğiniz için sonsuz teşekkür ve minnetlerimi sunarım.
+      Nasıl katılabilirsiniz?<br><br>
+      Adım1 // Eğer yüklemeyi düşündüğünüz sesi henüz kaydetmediyseniz, dışarı çıkın ve gönlünüzce kayıt yapmaya başlayın! Sesleri, ses kayıt cihazlarıyla veya benzeri pahalı ekipmanlarla kaydetmek zorunda değilsiniz, telefonunuzun lokal ses kayıt cihazını kullanabilir veya telefonunuzda bulunan uygulama merkezinden yeni bir ses kayıt uygulaması indirebilirsiniz.
+      Ufak not: Ses kaydı sırasında sosyal mesafenize, maske kullanımınıza ve hijyeninize dikkat etmeyi unutmayın! Her şeyden önce sağlıklı ve güvende olmanızı isterim.<br><br>
+      Örnek Kayıt // Bu ses Kemankeş Caddesi’nde iş makineleri çalışması sırasında kaydedildi.<br>
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/973023586&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-803295118-926584779" title="kayra" target="_blank" style="color: #cccccc; text-decoration: none;">kayra</a> · <a href="https://soundcloud.com/user-803295118-926584779/galataport-is-makineleri-calisma-sesi" title="Galataport İş Makineleri Çalışma Sesi" target="_blank" style="color: #cccccc; text-decoration: none;">Galataport İş Makineleri Çalışma Sesi</a></div><br>
+      Adım2 // Bulunduğunuz yerin adresini, tarihi ve saati not edin. Eğer mümkünse, kayıt yaptığınız yerin, dinlediğiniz öznenin, objenin bir fotoğrafını çekmeniz yarattığınız içeriği inanılmaz ölçüde zenginleştirecektir.<br><br>
+      Adım3 // Aşağıda yer alan formu doldurun.<br>
+      Yer alan Google Maps haritasından sesi kaydettiğiniz yeri işaretleyin. Seçeceğiniz konum kusursuz olmak zorunda değil, yaklaşık bir konum seçmeniz benim için yeterli olacaktır. <br><br>
+      Ardından eklemek istediğiniz ses dosyasını bilgisayarınızdan seçin. Yükleyeceğiniz ses dosyası belirli bir dosya türünde olmak zorunda değil, bu dosya MP3, WAV veya M4A uzantısına sahip olabilir.<br><br>
+      Ses kaydınızın ufak bir açıklamasını ekleyin. Örnek ses açıklaması: Galataport inşaatında çalışan öğle vakti çalışan inşaat makinelerinin çıkardığı yüksek desibelli ve rahatsız edici mekanik gürültü.<br><br>
+      Sesin geçtiği mekan bilgisini doldurun. Bu bilgi, ortaklaşa bilinen bir konum (Sultanahmet Camii gibi) ya da mahalle, sokak ismi olabilir. Forma ses kaydının yapıldığı tarihi ve saati seçerek devam edin.<br><br>
+      Eklemek istediğiniz ses etiketlerini doldurun. Etiketleri, virgül kullanarak ayırın. Bu etiketleri doldururken şu soruları örnek alabilirsiniz,<br>
+      Kaydettiğiniz ses bir canlı sesi mi? Bir bitki, hayvan veya insan mı yoksa cansız bir varlık mı? <br>    Ses yoğun mu yoksa sakin mi, doğal mı yoksa mekanik mi? <br>    Hava durumu kayıtta kendini belli ediyor mu, hava gökgürültülü, yağmurlu veya rüzgarlı mı? <br>    Kaydı doğada yaptıysanız neredesiniz, bir ormanda mı veya sahilde mi? <br>    Kayıt şehir içindense neler duyuyorsunuz, bağıran esnaflar mı yoksa inşaat sesleri mi, ezan mı yoksa arabaları mı? <br>     Toplu taşımadaysanız hangi araçtasınız?<br> <br> 
+      Yükeleyeceğiniz ses başka bir kaynaktan aktarıldıysa ve/ya içinde başka kaynaklardan sesler barındırıyorsa kaynağı belirtin. Bu projenin, tüm kaynakların telif haklarına karşı saygılı olması için bu gereklidir. Eğer telif haklarını ihlal edeceğini düşündüğünüz bir sesi yüklemeyi düşünüyorsanız, kaynağınıza giderek bunu araştırabilirsiniz veya notlar kısmından bana telif haklarını ihlal edebileceğine dair bir uyarıda bulunabilirsiniz.<br><br>
+      Kişisel bilgilerinizi girin. Kişisel bilgilerinizin tamamı opsiyoneldir, doldurup doldurmamak bütünüyle sizin tercihinizdir. Bu bilgilerin istenmesinin amacı, sizinle yüklediğiniz kayıt hakkında iletişime geçmek isteyebilme ihtimalimdir. Yüklediğiniz ses ile birlikte ad, soyad bilgilerinizin görünmesini isteyip istemediğinizi, seçiminize uyan küçük kutucuğu seçerek yapabilirsiniz. Kişisel bilgilerinizi doldurmayı tercih ederseniz, bu bilgiler bu site dışında herhangi bir yerde kullanılmayacak, üçüncü partilerle/şahıslarla paylaşılmayacaktır.<br><br>
+      Son olarak, bana iletmek istediğiniz notları doldurun. <br><br>
+      Bu kadar! Şimdi formu göndermeye hazırsınız. Gönderdiğiniz formu, en geç birkaç gün içinde inceleyip, haritayı güncelleyeceğim. Tekrardan teşekkürler! :’)<br><br>
+      
+    </p1>
+    <br><br>
+    <div class="row" style = "background-color:rgb(53, 53, 53);">
+      <div class="col-sm-8 offset-sm-2" >
+        <br><br>
+        <h1> KAYIT FORMU </h1><br>
+        <form action="" name="myForm" onsubmit="return validate()" method="POST">
+          <div class="form-group">
+
+            <p1> Ses dosyasının kaydedildiği yeri işaretleyin:</p1><br>
+            <div id = "map"></div>
+           
+          </div>
+          
+          <div class="form-group">
+            <label for="myfile">Eklemek istediğiniz ses dosyasını seçin:</label>
+            <input type="file" id="myfile" name="myfile">
+          </div>
+
+          <div class="form-group">
+            <label for="exp">Ses kaydının açıklaması: </label>
+            <input type="text" id="exp" name="exp" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="loc">Sesin geçtiği mekan: </label>
+            <input type="text" id="loc" name="loc" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="date">Kaydın yapıldığı tarih:</label>
+            <input type="date" id="date" name="date">
+          </div>
+
+          <div class="form-group">
+            <label for="time">Kaydın yapıldığı saat:</label>
+            <input type="time" id="time" name="time">
+          </div>
+
+          <div class="form-group">
+            <label for="loc">Eklemek istediğiniz ses etiketleri: </label>
+            <textarea id="loc" name="loc" class="form-control" rows="4" cols="50"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Ses başka bir kaynaktan alındıysa veya başka bir kaynaktan sesler de içeriyorsa lütfen kaynağı belirtin:</label>
+            <input type="text" id="name" name="name" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label for="lastname">Soyadınız:</label>
+            <input type="text" id="lastname" name="lastname" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">E-mailiniz:</label>
+            <input type="email" id="email" name="email" class="form-control" required
+            pattern="[a-zA-Z]*" />
+          </div>
+
+          <div class="form-group">
+            <label for="loc">Bana not bırakmaktan çekinmeyin!^ </label>
+            <textarea id="loc" name="loc" class="form-control" rows="4" cols="50"></textarea>
+          </div>
+          
+          <br> <br>
+          
+          
+          
+          <input type="submit" class="btn btn-primary" name="submit" value="Gönder!^">
+          <input type="reset" class="btn btn-danger" name="reset" value="Sıfırla">
+          <br> <br>
+        </form>
+      </div>
+    </div>
+    
+    
+    
+  </body>
+  </html>
